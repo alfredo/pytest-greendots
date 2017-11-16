@@ -14,7 +14,7 @@ def pytest_report_teststatus(report):
         if report.passed:
             letter = t.green(u".")
         elif report.skipped:
-            letter = t.yellow(u"s")
+            letter = t.yellow(u"❗")
         elif report.failed:
-            letter = t.red(u".")
+            letter = t.red(u"❌")
         return report.outcome, letter, report.outcome.upper()
